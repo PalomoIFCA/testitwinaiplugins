@@ -85,6 +85,20 @@ setup(
 )
 ```
 
+### Docker containers
+
+In this template repository you can already find two sample Dockerfiles as
+example to build your containers using the itwinai container images as a base.
+
+- `Dockerfile` provides an example of recipe that you would like to use to define
+a general purpose container, to be executed on cloud or on HPC.
+- `jupyter.Dockerfile` is an example of JupyterLab container based on the itwinai
+one.
+
+In this repository you can also find a `.dockerignore` file, which lists all the
+files and directories to be ignored by docker build. Make sure to customize it
+to your needs!
+
 ## Installing a plugin
 
 An end user can install a plugin directly from its repository or from
