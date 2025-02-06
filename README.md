@@ -37,11 +37,12 @@ my_obj = awesome_module.AwesomeClass(another='bar', arg=False)
 Similarly, you can import modules from plugin's subfolders. In this case:
 
 ```python
-from itwinai.plugins.plugin_subfolder import another_module
+from itwinai.plugins.my_awesome_plugin.plugin_subfolder import another_module
 # Call some function
 another_module.another_function()
 
-from itwinai.plugins.another_plugin_subfolder import yet_another_module
+from itwinai.plugins.my_awesome_plugin.another_plugin_subfolder import yet_another_module
+
 # Call some function
 yet_another_module.yet_another_function()
 ```
