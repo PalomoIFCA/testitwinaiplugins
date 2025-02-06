@@ -73,6 +73,7 @@ where = ["src"]
 include = [
     "itwinai.plugins.my_awesome_plugin",
     "itwinai.plugins.my_awesome_plugin.plugin_subfolder",
+    "itwinai.plugins.my_awesome_plugin.another_plugin_subfolder",
 ]
 ```
 
