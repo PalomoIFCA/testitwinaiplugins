@@ -34,6 +34,18 @@ awesome_module.awesome_function(some=1, argument='foo')
 my_obj = awesome_module.AwesomeClass(another='bar', arg=False)
 ```
 
+Similarly, you can import modules from plugin's subfolders. In this case:
+
+```python
+from itwinai.plugins.plugin_subfolder import another_module
+# Call some function
+another_module.another_function()
+
+from itwinai.plugins.another_plugin_subfolder import yet_another_module
+# Call some function
+yet_another_module.yet_another_function()
+```
+
 ## How to write a new plugin
 
 To write a new plugin, you can take inspiration from
@@ -53,10 +65,22 @@ the `itwinai.plugins.*` namespace:
 
 ```toml
 [tool.setuptools.packages.find]
+
 # Declare this package as part of the `itwinai.plugins` namespace
 where = ["src"]
-include = ["itwinai.plugins.my_awesome_plugin"]
+
+# List plugin folders and subfolders
+include = [
+    "itwinai.plugins.my_awesome_plugin",
+    "itwinai.plugins.my_awesome_plugin.plugin_subfolder",
+]
 ```
+
+> [!CAUTION]
+> Make sure to list all the plugin subfolders in the `include` field
+> of the `pyproject.toml` file,
+> otherwise the plugin may not be installed correctly and plugin
+> sub-packages may not be visble!
 
 As a plugin developer, all you have to do is maintaining your Python
 packages and modules under `src/itwinai/plugins`.

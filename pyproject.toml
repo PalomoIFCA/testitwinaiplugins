@@ -10,6 +10,13 @@ authors = [{ name = "User Name", email = "user@example.com" }]
 dependencies = ["itwinai"]
 
 [tool.setuptools.packages.find]
+
 # Declare this package as part of the `itwinai.plugins` namespace
 where = ["src"]
-include = ["itwinai.plugins.my_awesome_plugin"]
+
+# Make sure to list all the plugin subfolders here,
+# otherwise the plugin may not be installed correctly!
+include = [
+    "itwinai.plugins.my_awesome_plugin",
+    "itwinai.plugins.my_awesome_plugin.plugin_subfolder",
+]
