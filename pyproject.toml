@@ -24,3 +24,18 @@ include = [
     "itwinai.plugins.my_awesome_plugin.plugin_subfolder",
     "itwinai.plugins.my_awesome_plugin.another_plugin_subfolder",
 ]
+
+# Ruff configuration: https://docs.astral.sh/ruff/configuration/
+[tool.ruff]
+line-length = 95
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E203"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
