@@ -125,6 +125,22 @@ In this repository you can also find a `.dockerignore` file, which lists all the
 files and directories to be ignored by docker build. Make sure to customize it
 to your needs!
 
+### Writing unit and integration tests
+
+It is good practice to write tests for your code, and the itwinai plugins are not
+an exception! Find some examples of unit tests under `tests/`, which can be
+launched with `pytest` from the root of the repository with:
+
+```bash
+pytest -v tests/
+```
+
+Learn more about `pytest` [here](https://docs.pytest.org/en/stable/).
+
+Notice that the tests will be executed automatically in the GitHub Actions space
+every time you push to the main branch. You can change this behavior editing the
+file at `.github/workflows/pytest.yaml`.
+
 ## Installing a plugin
 
 An end user can install a plugin directly from its repository or from
