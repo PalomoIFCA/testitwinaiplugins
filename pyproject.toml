@@ -10,7 +10,10 @@ requires-python = ">=3.10"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [{ name = "User Name", email = "user@example.com" }]
-dependencies = ["itwinai"]
+dependencies = [
+    "itwinai[torch]",
+    "pytest>=8.3.4",
+]
 
 [tool.setuptools.packages.find]
 

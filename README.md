@@ -1,5 +1,9 @@
 # Writing plugins for itwinai
 
+[![GitHub Super-Linter](https://github.com/interTwin-eu/itwinai-plugin-template/actions/workflows/lint.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![GitHub Super-Linter](https://github.com/interTwin-eu/itwinai-plugin-template/actions/workflows/check-links.yml/badge.svg)](https://github.com/marketplace/actions/markdown-link-check)
+ [![SQAaaS source code](https://github.com/EOSC-synergy/itwinai-plugin-template.assess.sqaaas/raw/main/.badge/status_shields.svg)](https://sqaaas.eosc-synergy.eu/#/full-assessment/report/https://raw.githubusercontent.com/eosc-synergy/itwinai-plugin-template.assess.sqaaas/main/.report/assessment_output.json)
+
 It would be beneficial to integrate the interTwin use case code
 directly into itwinai, providing an easy way to distribute and
 compare AI methods used by various researchers.
@@ -124,6 +128,22 @@ one.
 In this repository you can also find a `.dockerignore` file, which lists all the
 files and directories to be ignored by docker build. Make sure to customize it
 to your needs!
+
+### Writing unit and integration tests
+
+It is good practice to write tests for your code, and the itwinai plugins are not
+an exception! Find some examples of unit tests under `tests/`, which can be
+launched with `pytest` from the root of the repository with:
+
+```bash
+pytest -v tests/
+```
+
+Learn more about `pytest` [here](https://docs.pytest.org/en/stable/).
+
+Notice that the tests will be executed automatically in the GitHub Actions space
+every time you push to the main branch. You can change this behavior editing the
+file at `.github/workflows/pytest.yaml`.
 
 ## Installing a plugin
 
