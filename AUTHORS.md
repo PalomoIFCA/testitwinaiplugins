@@ -2,7 +2,7 @@
 
 ## Maintainers
 
-Matteo Bunino \<matteo.bunino@cern.ch\>
+Matteo Bunino [matteo.bunino@cern.ch](mailto:matteo.bunino@cern.ch)
 
 ## Contributors
 
