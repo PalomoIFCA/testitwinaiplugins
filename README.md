@@ -97,6 +97,13 @@ packages and modules under `src/itwinai/plugins`.
 > plugin names, otherwise your plugin may be overridden by another one
 > when installed at the same time!
 
+> [!IMPORTANT]  
+> Since your plugin is a Python library, remember that **each package
+> and sub-package (i.e., folder and sub-folder) must contain at
+> least one `__init__.py` file**, even
+> if empty. Otherwise it will not be possible to correctly import
+> the modules from the plugin.
+
 Alternatively, instead of a `pyproject.toml`, you can as well use the
 legacy `setup.py` to describe your plugin package. In that case, remember
 to add the following arguments to the `setup` function, to ensure the correct
