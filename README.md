@@ -97,6 +97,9 @@ packages and modules under `src/itwinai/plugins`.
 > plugin names, otherwise your plugin may be overridden by another one
 > when installed at the same time!
 
+Also, be minful of the Python
+[packaging rules](https://packaging.python.org/en/latest/tutorials/packaging-projects/)!
+
 > [!IMPORTANT]  
 > Since your plugin is a Python library, remember that **each package
 > and sub-package (i.e., folder and sub-folder) must contain at
