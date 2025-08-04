@@ -11,7 +11,7 @@ import pytest
 # Basic test cases
 def test_foo():
     """Test if 'foo' is a string."""
-    assert isinstance("foo", str)
+    assert isinstance("fooo", str)
 
 
 def test_bar():
