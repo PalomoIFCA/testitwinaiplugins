@@ -15,6 +15,9 @@ COPY src src
 # Install dependencies
 RUN pip install --no-cache-dir .
 
+# Copy tests
+COPY tests tests
+
 # Copy your scripts
 COPY main.py main.py
 

@@ -7,13 +7,9 @@ name = "itwinai-awesome-plugin"
 version = "0.0.1"
 description = "User's custom plugin for itwinai"
 requires-python = ">=3.10"
-readme = "README.md"
-license = { file = "LICENSE" }
+
 authors = [{ name = "User Name", email = "user@example.com" }]
-dependencies = [
-    "itwinai[torch]",
-    "pytest>=8.3.4",
-]
+dependencies = ["itwinai[torch]", "pytest>=8.3.4"]
 
 [tool.setuptools.packages.find]
 

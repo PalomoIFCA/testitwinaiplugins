@@ -1,12 +1,15 @@
 # This is a sample Dockerfile for JupyterLab containers based on itwinai containers
 
-# DO NOT UPGRADE OR DOWNGRRADE ALL JUPYTER PACKAGES (E.G., JUPYTERLAB), unless you know what you are doing
+# DO NOT UPGRADE OR DOWNGRADE ALL JUPYTER PACKAGES (E.G., JUPYTERLAB), unless you know what you are doing
 # Otherwise you risk of breaking the spawn in JupyterHub
 
 FROM ghcr.io/intertwin-eu/itwinai:jlab-slim-latest
 
 # Set working directory
-WORKDIR "$HOME/app"
+WORKDIR /app
+
+# Remove itwinai data under /app
+RUN rm -rf tests src pyptoject.toml Dockerfile
 
 # Copy application dependencies.
 # Remember that you are not root in this container, so you need to
@@ -16,6 +19,9 @@ COPY  --chown=${NB_UID} src src
 
 # Install dependencies
 RUN pip install --no-cache-dir .
+
+# Copy tests
+COPY --chown=${NB_UID} tests tests
 
 # Copy your scripts
 COPY  --chown=${NB_UID} main.py main.py

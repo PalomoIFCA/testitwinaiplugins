@@ -8,6 +8,20 @@ Run the tests from the root of the repository with:
 import pytest
 
 
+# Test plugin import
+def test_plugin_imports():
+    from itwinai.plugins.my_awesome_plugin.another_plugin_subfolder.yet_another_module import (
+        yet_another_function,  # noqa: F401
+    )
+    from itwinai.plugins.my_awesome_plugin.awesome_module import (
+        AwesomeClass,  # noqa: F401
+        awesome_function,  # noqa: F401
+    )
+    from itwinai.plugins.my_awesome_plugin.plugin_subfolder.another_module import (
+        another_function,  # noqa: F401
+    )
+
+
 # Basic test cases
 def test_foo():
     """Test if 'foo' is a string."""

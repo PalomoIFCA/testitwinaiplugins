@@ -128,7 +128,8 @@ setup(
 ### Docker containers
 
 In this template repository you can already find two sample Dockerfiles as
-example to build your containers using the itwinai container images as a base.
+example to build your containers under `env-files` using the itwinai container
+images as a base.
 
 - `Dockerfile` provides an example of recipe that you would like to use to define
 a general purpose container, to be executed on cloud or on HPC.
